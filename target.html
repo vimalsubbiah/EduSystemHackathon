@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Parent's Login</title>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style007.css">
+</head>
+<body>
+	  <div id="home"></div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#home">Brain Fuze</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+				 </button>
+					<div class="collapse navbar-collapse" id="navbarText">
+					  <ul class="navbar-nav mr-auto">
+	     					 <li class="nav-item">
+								 <a class="nav-link" href="#academicrecords">Academic Records</a>
+							 </li>
+							  <li class="nav-item">
+								 <a class="nav-link" href="#resultanalysis">Result Analysis</a>
+							 </li>
+	     					  <li class="nav-item">
+								 <a class="nav-link" href="index.html">Log Out</a>
+							 </li>
+						</ul>
+							  <span class="navbar-text"> 
+				     			 <i>Engraving Diamonds</i>
+							   </span>
+					  </div>
+		</nav>
+		<!-- <div class="container"> -->
+			<div class="filler">
+				 <div class="academicrecords1">
+		    	<h2 id="academicrecords"><b>Academic Records<b></h2>
+		    		<table>
+		    			<tr>
+		    				<th>S.N.</th>
+		    				<th>Subject</th>
+		    				<th>Marks Obtained</th>
+		    				<th>Total Marks</th>
+		    				<th>GPA</th>
+		    			</tr>
+		    			<tr>
+		    				<td>1</td>
+		    				<td>English</td>
+		    				<td>96</td>
+		    				<td>100</td>
+		    				<td>9.6</td>
+		    			</tr>
+		    			<tr>
+		    				<td>2</td>
+		    				<td>Mathematics</td>
+		    				<td>80</td>
+		    				<td>100</td>
+		    				<td>8.0</td>
+		    			</tr>
+		    			<tr>
+		    				<td>3</td>
+		    				<td>Science</td>
+		    				<td>78</td>
+		    				<td>100</td>
+		    				<td>7.8</td>
+		    			</tr>
+		    			<tr>
+		    				<td>4</td>
+		    				<td>Physical Education</td>
+		    				<td>82</td>
+		    				<td>100</td>
+		    				<td>8.2</td>
+		    			</tr>
+		    			<tr>
+		    				<td>5</td>
+		    				<td>Computer Science</td>
+		    				<td>84</td>
+		    				<td>100</td>
+		    				<td>8.4</td>
+		    			</tr>
+		    			<tr>
+		    				<td>6</td>
+		    				<td>Arts</td>
+		    				<td>98</td>
+		    				<td>100</td>
+		    				<td>9.8</td>
+		    			</tr>
+		    			<tr>
+		    				<td>7</td>
+		    				<td>Music</td>
+		    				<td>86</td>
+		    				<td>100</td>
+		    				<td>8.6</td>
+		    			</tr>
+		    		</table>
+		   
+               </div>
+               <div class="academicrecords1">
+		    	 <h2 id="resultanalysis">Result Analysis</h2>
+		    	<script type="text/javascript">
+                         var students = [];
+var numOfSubjects, highest = { mark:-1 }, lowest = { mark:101 };
+while (isNaN(numOfSubjects) || numOfSubjects <= 0 || numOfSubjects > 15)
+    numOfSubjects = parseInt(prompt('How many subjects? (1-15)', '1'), 10);
+
+
+for (i = 1; i <= numOfSubjects; i++) {
+
+    var student = {};
+    while (typeof student.name === 'undefined' || student.name == '')
+        student.name = prompt('Enter Subject '+i+' name:', '');
+    
+    while (typeof student.mark === 'undefined' || isNaN(student.mark) || student.mark < 0 || student.mark > 100)
+        student.mark = parseFloat(prompt('Enter Subject '+i+' mark (0-100):', ''));
+    
+
+    if(student.mark > highest.mark) highest = student;
+    if(student.mark < lowest.mark) lowest = student;
+    
+   
+    students.push(student);
+}
+
+
+document.body.innerHTML ="The student has scored highest in "+ highest.name + " ,marks of the same being : " + highest.mark + ". " +"\n & has scored lowest in "+ lowest.name + " , marks of the same being :" + lowest.mark + "." ;
+
+var fav=prompt('what is your favourite subject')
+if (fav==highest.name){
+   alert("you are performing well in your favourite subject it is suggested that you take up this subject in the future.")
+}
+else if (fav ==lowest.name){
+   alert("you are performing poorly in your favourite subject ,it is recommended that you work hard towards it if you want to pursue it in future.")
+}
+else
+  {
+   alert("you are performing sub par in your favourite subject, it is recommended to put in a little effort towards it.")
+  }
+function future(xed)
+{
+    if (xed=="science"){
+        alert("Options include B.sc, BTech, M.B.B.S etc")
+    }
+    else if(xed=="english"){
+        alert("Options include English honors professions in writing journalism ,etc") 
+    }
+    else if(xed=="arts"){
+        alert("Options include B.A ,professions in art and painting etc")
+    }
+    else if(xed=="cs"){
+        alert("options include B.Tech in cs , ethical hacking,blockchain,artificial intelligence,machine learning etc.")
+    }
+    else if(xed=="music"){
+        alert("options include B.arts spec. in  Music etc")
+    }
+    else if(xed=="p.ed"){
+        alert("options include spec. in physical educations and sports")
+    }
+    else if(xed=="maths"){
+        alert("options include B.Sc in mathematics and other mathematical spec.")
+    }
+    else
+        {
+            alert("explore other options")
+        }
+}
+future(highest.name)
+</script>
+
+
+               </div>
+			</div>
+
+</body>
+</html>
