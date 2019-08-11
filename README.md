@@ -1,1 +1,2 @@
-# 1st hackathon exp
+# 1st hackathon
+improving and optimizing the educational system
