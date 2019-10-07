@@ -53,7 +53,7 @@ function future(xed)
         alert("options include B.arts spec. in  Music etc")
     }
     else if(xed=="p.ed"){
-        alert("options include spec. in physical educations and sports")
+        alert("options include specializations in physical education degree and sports coaching")
     }
     else if(xed=="maths"){
         alert("options include B.Sc in mathematics and other mathematical spec.")
